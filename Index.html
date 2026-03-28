@@ -31,9 +31,15 @@
 	<p style="text-indent: 50px">base64 -i PROVISIONING_PROFILE.mobileprovision | pbcopy</p>
 	<p>KEYCHAIN_PASSWORD: Temporary keychain password on runner. Any password.</p>
 	<p>APP_STORE_CONNECT_KEY_ID: App Store Connect key. For distribution or TestFlight</p>
+	<p style="text-indent: 50px">a. Go to App Store Connect, Users and Access tab</p>
+	<p style="text-indent: 50px">b. Left side: Keys -> App Store Connect API</p>
+	<p style="text-indent: 50px">c. For CI, use Team Keys</p>
+	<p style="text-indent: 50px">d. Copy 'KEY ID'</p>
 	<p>APP_STORE_CONNECT_ISSUER_ID: App Store Connect user</p>
+	<p style="text-indent: 50px">e. Copy 'Issuer ID'</p>
 	<p>APP_STORE_CONNECT_PRIVATE_KEY: App store Connect private key</p>
+	<p style="text-indent: 50px">f. Download AuthKey_********.p8 file</p>
+	<p style="text-indent: 50px">g. Run: base64 -i AuthKey_********.p8 | pbcopy</p>
 
-  
 </body>
 </html>
