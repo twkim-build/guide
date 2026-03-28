@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoopRep Support</title>
+</head>
+<body>
+  <h1>Prepare GitHub secrets</h1>
+  <p>1. Create distribution certificate manually</p>
+  <p style="text-indent: 50px">a. Run Keychain Access</p>
+  <p style="text-indent: 50px">b. Select 'login' from left side</p>
+  <p style="text-indent: 50px">c. Menu 'Certificate Assistant -> Request a Certificate From a Certificate Authority'</p>
+  <p style="text-indent: 50px">d. Input email, select 'Saved to disk'</p>
+  <p style="text-indent: 50px">e. With that file, create a distribution certificate from Apple</p>
+  <p style="text-indent: 50px">f. Download the distribution certificate</p>
+  <p style="text-indent: 50px">g. Create a distribution profile, and download that</p>
+  <p>2. Double click the downloaded 'distribution.cer', step 1.f</p>
+  <p>3. In Keychain Access, find the distribution certificate, "My Certificates" tab</p>
+  <p>4. Export that as '.p12' file. While exporting, enter password. This is P12_PASSWORD secret in GitHub</p>
+  <p>5. Move to '.p12' file and run: base64 -i that_file.p12 | pbcopy</p>
+  <p>6. Add that value to GitHub secret as BUILD_CERTIFICATE_BASE64</p>
+  <p>7. Move to distribution profile file and run: base64 -i provision_file.mobileprovision | pbcopy</p>
+  <p>8. Add that value to GitHub secret as BUILD_PROVISION_PROFILE_BASE64</p>
+
+</body>
+</html>
