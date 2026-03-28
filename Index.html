@@ -25,8 +25,10 @@
 
   <h1>GitHub secret variables</h1>
 	<p>BUILD_CERTIFICATE_BASE64: Access Certificate. To prove user.</p>
+	<p style="text-indent: 50px">base64 -i BUILD_CERTIFICATE.p12 | pbcopy</p>
 	<p>P12_PASSWORD: Protect Access Certificate password</p>
 	<p>BUILD_PROVISION_PROFILE_BASE64: Provision. To allow what to do.</p>
+	<p style="text-indent: 50px">base64 -i PROVISIONING_PROFILE.mobileprovision | pbcopy</p>
 	<p>KEYCHAIN_PASSWORD: Temporary keychain password on runner. Any password.</p>
 	<p>APP_STORE_CONNECT_KEY_ID: App Store Connect key. For distribution or TestFlight</p>
 	<p>APP_STORE_CONNECT_ISSUER_ID: App Store Connect user</p>
