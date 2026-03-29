@@ -6,6 +6,20 @@
   <title>LoopRep Support</title>
 </head>
 <body>
+  <h1>Setup Fastlane</h1>
+  <p>1. Install rbenv: brew install rbenv	// If not installed.</p>
+  <p>2. Create .ruby-version file and add version "4.0.2".</p>
+  <p>3. Install bundler: gem install bundler	// If not installed.</p>
+  <p>4. Create Gemfile and add below:</p>
+  <p style="text-indent: 50px>
+	 source 'https://rubygems.org'
+     gem 'fastlane'
+	 gem 'ostruct'   // Removed from the latest Ruby, but Fastlane still use.
+  </p>
+  <p>5. Install gems (fastlane): bundle install		// Update Gemfile.lock. Also commit Gemfile.lock file.</p>
+  <p>6. Init Fastlane: bundle exec fastlane init</p>
+  <p>7. Run fastlane command, e.g.: bundle exec fastlane beta</p>
+	
   <h1>Prepare GitHub secrets</h1>
   <p>1. Create distribution certificate manually</p>
   <p style="text-indent: 50px">a. Run Keychain Access</p>
