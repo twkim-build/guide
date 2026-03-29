@@ -54,6 +54,8 @@
 	<p>* APP_STORE_CONNECT_PRIVATE_KEY: App store Connect private key</p>
 	<p style="text-indent: 50px">f. Download AuthKey_********.p8 file</p>
 	<p style="text-indent: 50px">g. Run: base64 -i AuthKey_********.p8 | pbcopy</p>
+	<p>* DISTRIBUTION_PROVISION_NAME: Distribution provision profile name. My custom variable</p>
+	<p style="text-indent: 50px">The name in "Certificates, Identifiers & Profiles" site -> Profiles menu</p>
 	
 <h1>Xcode settings: Signing & Capabilities</h1>
 	<p>When uploading the archive to TestFlight or AppStore, it only use the DISTRIBUTION certificate and provisioning profile. So you should set the Signing & Capabilities of Release manually. Otherwise git runner will print this message "... Xcode couldn't find any iOS App Development provisioning profiles ...".</p>
