@@ -60,5 +60,22 @@
 <h1>Xcode settings: Signing & Capabilities</h1>
 	<p>When uploading the archive to TestFlight or AppStore, it only use the DISTRIBUTION certificate and provisioning profile. So you should set the Signing & Capabilities of Release manually. Otherwise git runner will print this message "... Xcode couldn't find any iOS App Development provisioning profiles ...".</p>
 
+
+  <h1>Running KMP iOS prject with Xcode</h1>
+  <p>1. Have to use Java 17, not 25 (latest version)</>
+  <p>2. Install Java using brew: brew install openjdk@17</>
+  <p>3. Run this command in terminal.</>
+  <p style="text-indent: 50px">sudo ln -sfn "$(brew --prefix openjdk@17)/libexec/openjdk.jdk" /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+	    /usr/libexec/java_home -V</>
+  <p>4. Add this to ~/.zshrc</>
+  <p style="text-indent: 50px">export JAVA_HOME=$(/usr/libexec/java_home -v 17)</>
+  <p style="text-indent: 50px">export PATH="$JAVA_HOME/bin:$PATH"</>
+  <p>5. For debuging, add this script to Xcode build phase.</>
+  <p style="text-indent: 50px">export JAVA_HOME="$(/usr/libexec/java_home -v 17)"</>
+  <p style="text-indent: 50px">export PATH="$JAVA_HOME/bin:$PATH"</>
+  <p style="text-indent: 50px">echo "JAVA_HOME=$JAVA_HOME"</>
+  <p style="text-indent: 50px">java -version</>
+
+
 </body>
 </html>
